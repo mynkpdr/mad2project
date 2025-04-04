@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Data</title>
+    <style>
+        body, table, td, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header img {
+            width: 200px;
+            margin-bottom: 15px;
+        }
+
+        .header h2 {
+            color: #FF671F;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 30px 0;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .file-icon {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 48px;
+            color: #FF671F;
+        }
+
+        .message {
+            background-color: #f8f9fa;
+            border-left: 4px solid #FF671F;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #FF671F;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                padding: 15px;
+            }
+
+            .header h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="https://i.ibb.co/Q7h0n0Qk/logo-horizontal-400-100.png" alt="ExamBhai Logo">
+            <h2>Your Export is Ready</h2>
+        </div>
+
+        <div class="content">
+            <div class="file-icon">
+                📊
+            </div>
+            <div class="message">
+                <p>Your requested export file is attached to this email. You can download and view it at your convenience.</p>
+            </div>
+
+            <p>The file contains your requested data in the format you selected. If you have any issues accessing the file, please don't hesitate to contact our support team.</p>
+            
+            <p>Thank you for using ExamBhai!</p>
+        </div>
+
+        <div class="footer">
+            <p>Need help? <a href="mailto:support@exambhai.com">Contact Support</a></p>
+            <p>&copy; 2025 ExamBhai. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

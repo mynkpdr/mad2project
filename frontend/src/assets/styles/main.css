@@ -1,0 +1,206 @@
+/* Global styles */
+* {
+    font-family: 'Poppins';
+}
+
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-button:single-button:decrement {
+    background: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='12,8 6,14 18,14'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 18px;
+    background-color: #444;
+}
+
+::-webkit-scrollbar-button:single-button:increment {
+    background: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='6,10 18,10 12,16'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 18px;
+    background-color: #444;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Component styles */
+.btn-primary {
+    background-color: #FF671F !important;
+    border-color: #FF671F !important;
+}
+
+.btn-primary:hover {
+    background-color: #ec5205 !important;
+    border-color: #ec5205 !important;
+}
+
+.btn-secondary {
+    background-color: #161a2d !important;
+    border-color: #161a2d !important;
+}
+
+.btn-secondary:hover {
+    background-color: #070914 !important;
+    border-color: #070914 !important;
+}
+
+.btn-outline-primary {
+    border-color: #FF671F !important;
+    color: #FF671F !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #FF671F !important;
+    color: #fff !important;
+    border-color: #FF671F !important;
+}
+
+.btn-outline-secondary {
+    border-color: #161a2d !important;
+    color: #161a2d !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #161a2d !important;
+    color: #fff !important;
+    border-color: #161a2d !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FF671F;
+    color: #fff;
+}
+
+i.text-primary {
+    color: #FF671F !important;
+}
+
+h2.text-primary {
+    color: #FF671F !important;
+}
+
+
+th {
+    vertical-align: middle !important;
+    font-weight: 800;
+    text-align: center !important;
+    /* color: #FF671F; */
+}
+
+td {
+    vertical-align: middle !important;
+    letter-spacing: 0.2px;
+    text-align: center !important;
+    cursor: pointer;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #161a2d31;
+    transform: scale(1.01);
+}
+
+
+/* Utility classes */
+.night-mode {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.sidebar {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode .modal-content {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode .dropdown-menu {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode .dropdown-menu .dropdown-item {
+    color: white !important;
+}
+
+/* radial background looks good */
+.night-mode .card {
+    /* background: radial-gradient(circle, #161a2d, #070914) !important; */
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+/* .night-mode .card-header {
+    border-width: 0px;
+    color: white !important;
+} */
+
+.night-mode .options .form-control {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode .answer_explanation {
+    background-color: #161a2d !important;
+    color: white !important;
+    opacity: 0.25;
+}
+
+.night-mode .list-group a {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode .list-group .list-group-item {
+    background-color: #161a2d !important;
+}
+
+.night-mode input {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode select:disabled{
+    opacity: 0.25;
+}
+.night-mode input:disabled{
+    opacity: 0.25;
+}
+.night-mode input::placeholder{
+    color: white;
+    opacity: 0.25;
+}
+
+.night-mode select {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+
+.night-mode textarea {
+    background-color: #161a2d !important;
+    color: white !important;
+}
+.night-mode tbody tr:hover {
+    background-color: #282e5070;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quiz Reminder</title>
+</head>
+
+<body
+    style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 30px; border-bottom: 2px solid #eeeeee;">
+                            <img src="https://i.ibb.co/Q7h0n0Qk/logo-horizontal-400-100.png" alt="Logo"
+                style="width: 100px; height: auto; margin-bottom: 20px;" />
+                            <h2 style="color: #FF671F; margin: 0; font-size: 24px;">New Quiz Alert!</h2>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td align="center" style="padding: 30px;">
+                            <p style="margin: 0 0 20px 0;">Hello {{user.name}},</p>
+                            <div style="background-color: #FF671F; color: white; padding: 15px; border-radius: 8px; margin: 20px 0; font-size: 18px;">
+                                You have {{new_quizzes|length}} new quizzes available!
+                            </div>
+                            <p style="margin: 0 0 20px 0;">Don't miss out on the opportunity to test your knowledge and improve your skills.</p>
+
+                            <!-- Loop through new quizzes -->
+                            <h3 style="color: #FF671F;">New Quizzes Available:</h3>
+                            {% for quiz in new_quizzes %}
+                                <div style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                                    <h4 style="color: #333333; font-size: 18px;">{{ quiz.name }}</h4>
+                                    <p style="margin: 5px 0; font-size: 16px;">
+                                        <strong>Date:</strong> {{ quiz.date_of_quiz }} <br>
+                                        <strong>Difficulty:</strong> {{ quiz.difficulty_level.value }} <br>
+                                        <strong>Duration:</strong> {{ quiz.time_duration * 60 }} minutes <br>
+                                        <strong>Mode:</strong> {{ quiz.quiz_mode.value }} <br>
+                                        <strong>Description:</strong> {{ quiz.description }} <br>
+                                    </p>
+                                </div>
+                            {% endfor %}
+
+                            <a href="{{frontend_url}}/dashboard" style="display: inline-block; background-color: #FF671F; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 20px 0; font-weight: bold;">View New Quizzes</a>
+                            <p style="color: #666666; font-size: 14px; margin: 0;">Quick tip: Regular practice helps improve your performance!</p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 20px; border-top: 2px solid #eeeeee;">
+                            <p style="color: #666666; font-size: 14px; margin: 0 0 10px 0;">Need help? <a href="mailto:support@exambhai.com" style="color: #FF671F; text-decoration: none;">Contact Support</a></p>
+                            <p style="color: #666666; font-size: 14px; margin: 0;">&copy; 2025 ExamBhai. All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

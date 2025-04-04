@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{frequency.capitalize()}} Performance Report in {{ selected_quiz_mode.capitalize() }}s</title>
+</head>
+
+<body
+    style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
+    <!-- Main Container -->
+    <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eeeeee;">
+            <img src="https://i.ibb.co/Q7h0n0Qk/logo-horizontal-400-100.png" alt="Logo"
+                style="width: 100px; height: auto; margin-bottom: 20px;" />
+            <h2 style="color: #FF671F; margin: 0; font-size: 24px;">{{frequency.capitalize()}} Performance Report in {{ selected_quiz_mode.capitalize() }}s</h2>
+            <p style="color: #666666; margin-top: 10px;">Period: {{ report_period }}</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 30px;">
+            <tr>
+                <!-- Average Score Card -->
+                <td width="33.33%" style="padding: 10px;">
+                    <div
+                        style="background: #FF671F; color: white; padding: 5px; border-radius: 8px; text-align: center;">
+                        <h6 style="margin: 0 0 10px 0; font-size: 14px;">Average Score</h6>
+                        <h2 style="margin: 0; font-size: 24px;">{{ stats.avg_score }}%</h2>
+                    </div>
+                </td>
+                <!-- Completed Card -->
+                <td width="33.33%" style="padding: 10px;">
+                    <div
+                        style="background: #00499d; color: white; padding: 5px; border-radius: 8px; text-align: center;">
+                        <h6 style="margin: 0 0 10px 0; font-size: 14px;">{{ selected_quiz_mode|capitalize }}s Completed
+                        </h6>
+                        <h2 style="margin: 0; font-size: 24px;">{{ stats.completed_quizzes }}</h2>
+                    </div>
+                </td>
+                <!-- Points Card -->
+                <td width="33.33%" style="padding: 10px;">
+                    <div
+                        style="background: #ffdd00; color: white; padding: 5px; border-radius: 8px; text-align: center;">
+                        <h6 style="margin: 0 0 10px 0; font-size: 14px;">Points Earned</h6>
+                        <h2 style="margin: 0; font-size: 24px;">{{ stats.points_earned }}</h2>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Charts Section -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <!-- Points Chart -->
+                <td width="50%" style="padding: 10px;">
+                    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                        <h5
+                            style="color: #FF671F; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 2px solid #eeeeee; font-size: 16px;">
+                            Points Earned in {{ selected_quiz_mode|capitalize }}s
+                        </h5>
+                        <img style="width: 100%; height: auto; border-radius: 8px;"
+                            src="https://quickchart.io/chart?{{ student_points_history }}" alt="Points Earned Chart" />
+                    </div>
+                </td>
+                <!-- Subject Performance Chart -->
+                <td width="50%" style="padding: 10px;">
+                    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                        <h5
+                            style="color: #FF671F; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 2px solid #eeeeee; font-size: 16px;">
+                            Subject-wise Performance in {{ selected_quiz_mode.capitalize() }}s
+                        </h5>
+                        <img style="width: 100%; height: auto; border-radius: 8px;"
+                            src="https://quickchart.io/chart?{{ student_charts }}" alt="Subject Wise Average Scores" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Charts Section -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <!-- Comparision Chart -->
+                <td width="50%" style="padding: 10px;">
+                    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                        <h5
+                            style="color: #FF671F; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 2px solid #eeeeee; font-size: 16px;">
+                            {{frequency.capitalize()}} Performance Comparision
+                        </h5>
+                        <img style="width: 100%; height: auto; border-radius: 8px;"
+                            src="https://quickchart.io/chart?{{ student_comparision }}"
+                            alt="Performance Comparision Chart" />
+                    </div>
+                </td>
+                <!-- Time vs Score Chart -->
+                <td width="50%" style="padding: 10px;">
+                    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                        <h5
+                            style="color: #FF671F; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 2px solid #eeeeee; font-size: 16px;">
+                            Time vs Score in {{ selected_quiz_mode.capitalize() }}s
+                        </h5>
+                        <img style="width: 100%; height: auto; border-radius: 8px;"
+                            src="https://quickchart.io/chart?{{ student_time_score }}" alt="Time vs Score Chart" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <!-- Footer -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td align="center" style="padding: 20px; border-top: 2px solid #eeeeee;">
+                    <p style="color: #666666; font-size: 14px; margin: 0 0 10px 0;">Need help? <a href="mailto:support@exambhai.com" style="color: #FF671F; text-decoration: none;">Contact Support</a></p>
+                    <p style="color: #666666; font-size: 14px; margin: 0;">&copy; 2025 ExamBhai. All rights reserved.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

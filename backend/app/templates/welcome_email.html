@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to ExamBhai!</title>
+
+  <style>
+    body {
+      font-family: 'Gilroy', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+  
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FF671F; /* Orange color */
+      margin: 0;
+    }
+
+    .body-text {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .footer a {
+      color: #FF671F; /* Orange color */
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to ExamBhai!</h1>
+    </div>
+
+    <div class="body-text">
+      <p>Hello {{name}},</p>
+      <p>Thank you for joining us! We're excited to have you as part of our community. Feel free to explore all the features we offer and let us know if you have any questions.</p>
+      <p>We look forward to helping you achieve your goals!</p>
+    </div>
+
+    <div class="footer">
+      <p>If you need assistance, don't hesitate to <a href="mailto:contact@exambhai.com">contact us</a>.</p>
+      <p>Best regards,<br>ExamBhai</p>
+    </div>
+  </div>
+  <link href="https://cdn.jsdelivr.net/npm/@qpokychuk/gilroy@1.0.2/index.min.css" rel="stylesheet">
+
+</body>
+</html>
