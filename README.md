@@ -9,6 +9,25 @@ This project is from the Modern Application Development - II course which is off
 **👤 Demo Student Login**: `user@email.com` | **🔐 Password**: `12345678`  
 **👤 Demo Admin Login**: `admin@email.com` | **🔐 Password**: `12345678`
 
+## Screenshots
+<table>
+   <tr>
+     <td>
+       <div>
+         <div><img alt="Admin Dashboard" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885275/app/static/images/localhost_5173_admin_dashboard_4.png" width="500"/></div>
+         <div><img alt="Admin Student Quizzes" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885278/app/static/images/localhost_5173_admin_dashboard.png" width="500"/></div>
+       </div>
+     </td>
+     <td>
+       <img alt="Student Result" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885274/app/static/images/localhost_5173_admin_dashboard_1.png" width="500"/>
+     </td>
+   </tr>
+</table>
+
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+<img width="1604" alt="Student Dashboard" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885270/app/static/images/localhost_5173_dashboard_my_quizzes_5_1.png">Student Dashboard | <img width="1604" alt="Exam Instructions" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885270/app/static/images/localhost_5173_dashboard_my_quizzes_3_1.png">Exam Instructions | <img width="1604" alt="Exams List" src="https://res.cloudinary.com/dohhiwhug/image/upload/v1748885269/app/static/images/localhost_5173_browse_exam_1.png">Exams List
+
 ## Technologies used:
 ### Frontend:
 - Vue.js 3 (Composition API) - JavaScript framework for building user interfaces
